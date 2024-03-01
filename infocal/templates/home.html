@@ -8,13 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/base.css') }}">
 </head>
 
 <body>
     <main class="main-container">
-      <h1>INFOCAL</h1>
+      <div class="content-container">
+        <p id="location-status" class="location-status"></p>
+        <a id="map-link" class="map-link" target="_blank"></a>
+        <div id="location-result" class="location-result"></div>
+        <div class="button" id="button">Où suis-je ?</div>
+      </div>
     </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

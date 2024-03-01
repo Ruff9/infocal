@@ -1,0 +1,104 @@
+:root {
+    --app-background: #FFD580;
+    --title-color: #3B7080;
+
+    --button-color: orangered;
+    --button-shadow: #992900;
+    --button-hover: #e63d00;
+    --button-active: #cc3600;
+    --button-text: white;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--app-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.location-status {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.location-result {
+    margin-bottom: 20px;
+}
+
+.map-link {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+/* button from https://codepen.io/GeorgePorgee/embed/BxdBxG */
+
+.button {
+    order: 1;
+    position: relative;
+    background: var(--button-color);
+    border: none;
+    color: var(--button-text);
+    padding: 15px 24px;
+    font-size: 1.4rem;
+    box-shadow: -6px 6px 0 var(--button-shadow);
+    outline: none;
+    user-select: none; 
+}
+
+.button:hover {
+    background: var(--button-hover);
+}
+
+.button:active {
+    background: var(--button-active);
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 var(--button-shadow);
+}
+
+.button::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-right: solid 6px var(--button-shadow);
+    border-left-width: 0px;
+    background: none;
+    top: 0px;
+    left: -6px;
+}
+
+.button::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-top: solid 6px var(--button-shadow);
+    border-bottom-width: 0px;
+    background: none;
+    right: 0;
+    bottom: -6px;
+}
+
+.button:active::before {
+    border: solid 3px transparent;
+    border-right: solid 3px var(--button-shadow);
+    border-left-width: 0px;
+    left: -3px;
+}
+
+.button:active::after {
+    border: solid 3px transparent;
+    border-top: solid 3px var(--button-shadow);
+    border-bottom-width: 0px;
+    bottom: -3px;
+}
