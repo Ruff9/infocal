@@ -1,1 +1,1 @@
-web: flask --app infocal run
+web: gunicorn -w 4 infocal:app
