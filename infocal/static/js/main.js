@@ -30,13 +30,13 @@ function findMe() {
     }
 
     function error() {
-        status.textContent = "Unable to retrieve your location";
+        status.textContent = "Impossible de vous trouver :(";
     }
 
     if (!navigator.geolocation) {
-        status.textContent = "Geolocation is not supported by your browser";
+        status.textContent = "La géolocalisation ne fonctionne pas dans votre navigateur :(";
     } else {
-        status.textContent = "Locating…";
+        status.textContent = "Recherche ...";
         navigator.geolocation.getCurrentPosition(success, error, options);
     }
 }
