@@ -26,15 +26,14 @@
     text-align: center;
 }
 
-.location-result {
-    margin-bottom: 20px;
+.city-container {
+    text-align: center;
+    font-size: 2em;
 }
 
-.map-link {
-    display: block;
+.postcode-container {
     text-align: center;
-    text-decoration: underline;
-    margin-bottom: 10px;
+    font-size: 1em;
 }
 
 
